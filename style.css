@@ -7,6 +7,78 @@ font-family: Oswald-Medium;
 src: url(fonts/Oswald-Medium.ttf);
 }
 
+/* INTRO */
+/***************************/
+
+.welcome-section {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url("img/introtlo.png");
+    overflow: hidden;
+}
+
+.content-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fly-in-text {
+    list-style: none;
+    text-align: center;
+}
+
+.fly-in-text li {
+    font-family: Oswald-Medium;
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 5em;
+    color: #fff;
+    opacity: 1;
+    transition: all 5s ease 0.5s;
+}
+
+.enter-button{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: #adff2f;
+    opacity: 1;
+    margin-top: 30px;
+    transition: all 4s ease 1s;
+}
+
+.content-hidden .fly-in-text li{
+    opacity: 0;
+}
+
+.content-hidden .fly-in-text li:nth-child(1){ transform: translate3d(-10px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(2){ transform: translate3d(-20px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(3){ transform: translate3d(-30px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(4){ transform: translate3d(-40px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(5){ transform: translate3d(-50px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(6){ transform: translate3d(-60px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(7){ transform: translate3d(-70px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(8){ transform: translate3d(-80px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(9){ transform: translate3d(-90px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(10){ transform: translate3d(-100px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(12){ transform: translate3d(-60px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(13){ transform: translate3d(-60px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(14){ transform: translate3d(-60px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(15){ transform: translate3d(-60px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(16){ transform: translate3d(-60px, 0, 0);}
+.content-hidden .fly-in-text li:nth-child(17){ transform: translate3d(-60px, 0, 0);}
+.content-hidden .enter-button{ opacity: 0; transform: translate3d(0px, -30px, 0);}
+
+
+/* PAGE */
 body{
     width: 100%;
     height: 100%;
@@ -31,10 +103,10 @@ a {
     top: 0;
     width: 100%;
     height: 100px;
-    position: fixed;
+    position: absolute;
     border-bottom: 1px solid #fff;
     background-color: #050505;
-    z-index: 999;
+    z-index: 9;
 }
 
 .header img{
@@ -245,10 +317,10 @@ a{
 
 .facebook-box{
     transition-duration: 0.7s;
-    position: absolute;
-    z-index: 999;
+    position: fixed;
+    z-index: 99;
     left: 0;
-    top: 45vh;
+    top: 45%;
     background-color: #1A1E30;
     width: 300px;
     left: -300px;
@@ -256,10 +328,10 @@ a{
 
 .facebook-box-icon{
     transition-duration: 0.7s;
-    position: absolute;
-    z-index: 999;
+    position: fixed;
+    z-index: 99;
     left:0px;
-    top: 45vh;
+    top: 45%;
     background-color: #1A1E30;
     width: 53px;
     border-bottom-right-radius: 25px;
@@ -275,6 +347,10 @@ a{
 }
 .active-fb-box2{
     left: 0px !important;
+}
+
+.display{
+    display: none;
 }
 
 /* SEKCJA TEAMY NA GLOWNEJ   */

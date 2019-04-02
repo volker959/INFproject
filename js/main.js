@@ -1,3 +1,4 @@
+// funkcja onload dla sliderka
 window.onload = function () {
 var swiper = new Swiper('.swiper-container', {
   pagination: '.swiper-pagination',
@@ -20,7 +21,23 @@ var swiper = new Swiper('.swiper-container', {
 });
 };
 
+// Ladowanie intro
+document.addEventListener('DOMContentLoaded', function(){
+  var welcomeSection = $('.welcome-section'),
+      enterButton = welcomeSection.find('.enter-button');
 
+      setTimeout(function(){ 
+        welcomeSection.removeClass('content-hidden'); }, 700);
+
+        enterButton.on('click', function(e){
+          e.preventDefault();
+          welcomeSection.addClass('content-hidden').fadeOut();
+          $('.facebook-box-icon').removeClass('display');
+      });
+}, false);
+
+
+// funkcje do fb boxa
 function FBactive(){
   if ( $('.facebook-box-icon').hasClass('active-fb-box')){
     $('.facebook-box-icon').removeClass('active-fb-box');
@@ -32,7 +49,7 @@ function FBactive(){
   }
 };
 
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', function(){
   if ( $('.facebook-box-icon').hasClass('active-fb-box')){
     document.getElementById("facebook-box").style.left = "300px";
     document.getElementById("lang").style.transition = "0.7s";

@@ -3,6 +3,32 @@
     <?php 
         include 'header.php'; 
     ?>
+
+<div class="welcome-section content-hidden">
+    <div class="content-wrap">
+        <ul class="fly-in-text">
+        <li>I</li>
+        <li>N</li>
+        <li>F</li>
+        <li>R</li>
+        <li>A</li>
+        <li>C</li>
+        <li>T</li>
+        <li>I</li>
+        <li>O</li>
+        <li>N</li>
+        <br>
+        <li>G</li>
+        <li>A</li>
+        <li>M</li>
+        <li>I</li>
+        <li>N</li>
+        <li>G</li>
+        </ul>
+        <a href="#" class="enter-button">ENTER</a>
+    </div>
+</div>
+
     <div class="menu">
         <ul>
             <li><a class="menus active" href="index.php">HOME</a></li>
@@ -92,5 +118,6 @@
         zawartosc stopki
     </div>
 -->
+
 </body>
 </html>
