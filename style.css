@@ -1,0 +1,331 @@
+@font-face {
+    font-family: Oswald-Regular;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+@font-face {
+font-family: Oswald-Medium;
+src: url(fonts/Oswald-Medium.ttf);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Oswald-Medium;
+    color: #fff;
+    background-color: #060603;
+}
+
+/* fonts and links setings  */
+/*****************************/
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* header section and childs */
+/*****************************/
+.header{
+    top: 0;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    border-bottom: 1px solid #fff;
+    background-color: #050505;
+    z-index: 999;
+}
+
+.header img{
+    height: 80px;
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+.header li {
+    display: inline;
+  }
+
+.logo{
+    float: left;
+    margin: 10px 0 0 50px;
+}
+
+.menu{
+    float: left;
+    text-decoration: none;
+    height: 100px;
+    position: relative;
+}
+
+.menu ul{
+    margin-left: 150px;
+    padding-top: 37px;
+    padding-bottom: 36px;
+    font-size: 18px;
+}
+
+.menu a{
+    padding: 35px 15px;
+}
+
+.menu a:hover{
+    color: #005dff;
+    border-bottom: 3px solid #005dff;
+}
+
+.active{
+    color: #005dff;
+    border-bottom: 3px solid #005dff;
+}
+
+.login-button{
+    margin-left: 20px;
+    background-color: #005dff;
+    border-radius: 25px;
+}
+
+.login-button:hover{
+    border-bottom: 0 !important;
+    background-color:#fff !important;
+    color: #000 !important;
+}
+
+.login-button{
+    padding: 12px 50px 12px 50px !important;
+}
+
+.socials{
+    float: right;
+    margin-right: 20px;
+}
+.socials img{
+    height: 24px;
+    margin-right: 10px;
+    margin-top: 38px;
+    -webkit-filter: grayscale(100%);
+}
+.socials img:hover{
+    -webkit-filter: grayscale(0%);
+}
+/* Slider on index site      */
+/*****************************/
+
+.swiper-container {
+    left: 0;
+    width: 80%;
+    padding: 110px;
+    padding-bottom: 10px;
+}
+.swiper-slide {
+    text-align: center;
+    background: linear-gradient(185deg, rgba(13,12,12,1) 0%, rgba(0,93,255,1) 15%, rgba(0,93,255,1) 85%, rgba(13,12,12,1) 100%);
+    background-size: cover;
+    width: 350px;
+    height: 250px;
+}
+
+.swiper-slide img{
+    padding: 0;
+    width: auto;
+    height: 250px;
+}
+
+.slider{
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+.shine:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    
+}
+.shine:hover:after {
+    width: 100%;
+    background-color: rgba(255,255,255,0);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+/* NEWS BOX */
+
+/*
+a{
+    text-decoration: none;
+    color: #4DDED0;
+}
+*/
+.welcome
+{
+    width: 800px;
+    margin: 2em auto;
+    padding: 10px 30px;
+    background-color: rgb(189, 189, 189);
+}
+
+.welcome a
+{
+    display: inline-block;
+    width: 200px;
+    border: 2px solid #0DDED0;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.welcome h1
+{
+    margin: 0;
+    color: #555;
+}
+
+.news-box
+{
+
+    width: 800px;
+    margin: 0.5em auto;
+    padding: 30px;
+
+    background-color: rgb(189, 189, 189);
+}
+
+.news-box h2
+{
+    font-size: 1.3em;
+    padding: 0;
+    margin-bottom: 0;
+
+    color: #e45;
+}
+
+.news-box p
+{
+    font-size: 12px;
+    padding: 0;
+    margin-bottom: 0.3em;
+
+    color: #555;
+}
+
+.news-box span
+{
+    font-size: 10px;
+    color: #aaa;
+}
+
+.footer
+{
+    font-size: 10px;
+    color: #333;
+    text-align: center;
+
+    width: 800px;
+    margin: 2em auto;
+    padding: 10px 30px;
+}
+/* FACEBOOK BOX */
+/****************/
+
+.facebook-box{
+    transition-duration: 0.7s;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 45vh;
+    background-color: #1A1E30;
+    width: 300px;
+    left: -300px;
+}
+
+.facebook-box-icon{
+    transition-duration: 0.7s;
+    position: absolute;
+    z-index: 999;
+    left:0px;
+    top: 45vh;
+    background-color: #1A1E30;
+    width: 53px;
+    border-bottom-right-radius: 25px;
+}
+
+.facebook-box-icon img{
+    width: 45px;
+    margin-left: 2px;
+}
+
+.active-fb-box{
+    left: 300px !important;
+}
+.active-fb-box2{
+    left: 0px !important;
+}
+
+/* SEKCJA TEAMY NA GLOWNEJ   */
+/*****************************/
+
+.break{
+    margin-left: 20%;
+    width: 60%;
+    border-bottom: 1px solid #fff;
+}
+
+.army{
+    text-align: center;
+}
+.army h1{
+    text-align: center;
+    font-size: 3rem;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+/* Main content on index site */
+/*****************************/
+.container{
+    padding-top: 105px;
+}
+.content{
+    width: 100%;
+    height: 600px;
+}
+
+.box{
+    width: 75%;
+    height: 100%;
+    float: left;
+    background-color: blue;
+}
+
+.sidebar{
+    width: 25%;
+    height: 100%;
+    float: left;
+    background-color: green;
+}
+
+.footer{
+    width: 100%;
+    height: 50px;
+    background-color:#1A1E30;
+}
