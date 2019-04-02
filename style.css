@@ -41,23 +41,73 @@ src: url(fonts/Oswald-Medium.ttf);
     font-size: 5em;
     color: #fff;
     opacity: 1;
-    transition: all 5s ease 0.5s;
 }
 
 .enter-button{
     display: block;
     text-align: center;
-    font-size: 1em;
     text-decoration: none;
-    color: #adff2f;
+    color: #fff;
     opacity: 1;
-    margin-top: 30px;
-    transition: all 4s ease 1s;
+    transition: all 2.5s ease-in 0.5s;
 }
+
+.svg-wrapper {
+    margin-left: 231px;
+    margin-top: 30px;
+    display: inline-block;
+    border-radius: 3px;
+  }
+  
+  #shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: #009FFD;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+  }
+  
+  #text {
+    margin-top: -44px;
+    text-align: center;
+  }
+  
+  #text a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.5em;
+  }
+  
+  .svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #06D6A0;
+  }
+
 
 .content-hidden .fly-in-text li{
     opacity: 0;
 }
+.fly-in-text li:nth-child(1){ transition: all 1s ease 0.15s; }
+.fly-in-text li:nth-child(2){ transition: all 1s ease 0.25s; }
+.fly-in-text li:nth-child(3){ transition: all 1s ease 0.35s; }
+.fly-in-text li:nth-child(4){ transition: all 1s ease 0.45s; }
+.fly-in-text li:nth-child(5){ transition: all 1s ease 0.55s; }
+.fly-in-text li:nth-child(6){ transition: all 1s ease 0.65s; }
+.fly-in-text li:nth-child(7){ transition: all 1s ease 0.75s; }
+.fly-in-text li:nth-child(8){ transition: all 1s ease 0.85s; }
+.fly-in-text li:nth-child(9){ transition: all 1s ease 0.95s; }
+.fly-in-text li:nth-child(10){ transition: all 1s ease 1.05s;}
+.fly-in-text li:nth-child(12){ transition: all 1s ease 1.15s; }
+.fly-in-text li:nth-child(13){ transition: all 1s ease 1.15s; }
+.fly-in-text li:nth-child(14){ transition: all 1s ease 1.15s; }
+.fly-in-text li:nth-child(15){ transition: all 1s ease 1.15s; }
+.fly-in-text li:nth-child(16){ transition: all 1s ease 1.15s; }
+.fly-in-text li:nth-child(17){ transition: all 1s ease 1.15s; }
+
 
 .content-hidden .fly-in-text li:nth-child(1){ transform: translate3d(-10px, 0, 0);}
 .content-hidden .fly-in-text li:nth-child(2){ transform: translate3d(-20px, 0, 0);}
