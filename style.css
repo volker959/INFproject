@@ -53,7 +53,7 @@ src: url(fonts/Oswald-Medium.ttf);
 }
 
 .svg-wrapper {
-    margin-left: 231px;
+    margin-left: 205px;
     margin-top: 30px;
     display: inline-block;
     border-radius: 3px;
@@ -69,7 +69,7 @@ src: url(fonts/Oswald-Medium.ttf);
   }
   
   #text {
-    margin-top: -44px;
+    margin-top: -39px;
     text-align: center;
   }
   
@@ -153,7 +153,7 @@ a {
     top: 0;
     width: 100%;
     height: 100px;
-    position: absolute;
+    position: fixed;
     border-bottom: 1px solid #fff;
     background-color: #050505;
     z-index: 9;
@@ -289,79 +289,81 @@ a {
 
 /* NEWS BOX */
 
-/*
-a{
-    text-decoration: none;
-    color: #4DDED0;
+.container{
+    width:1500px;
 }
-*/
-.welcome
-{
-    width: 800px;
-    margin: 2em auto;
-    padding: 10px 30px;
-    background-color: rgb(189, 189, 189);
+.news-hello {
+    color: #000;
+    padding: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.welcome a
-{
-    display: inline-block;
-    width: 200px;
-    border: 2px solid #0DDED0;
-    padding: 0.5em;
-    text-align: center;
+.news-top{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-left: 85px;
+    padding-top: 150px;
+    padding-bottom: 125px;
+    color: #000;
+}
+.news-bottom{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-left: 40px;
+    padding-top: 100px;
+    padding-bottom: 75px;
+    color: #000;
 }
 
-.welcome h1
-{
-    margin: 0;
-    color: #555;
+.news:hover{
+    
 }
 
-.news-box
-{
+.news1 {
+    background-image: url("img/cgoNews.png");
 
-    width: 800px;
-    margin: 0.5em auto;
-    padding: 30px;
-
-    background-color: rgb(189, 189, 189);
 }
 
-.news-box h2
-{
-    font-size: 1.3em;
-    padding: 0;
-    margin-bottom: 0;
-
-    color: #e45;
+.news2 {
+    background-image: url("img/fifaNews.png");
 }
 
-.news-box p
-{
-    font-size: 12px;
-    padding: 0;
-    margin-bottom: 0.3em;
-
-    color: #555;
+.news3 {
+    background-image: url("img/lolNews.png");
 }
 
-.news-box span
-{
-    font-size: 10px;
-    color: #aaa;
+.news4 {
+    background-image: url("img/lolNews.png");
 }
 
-.footer
-{
-    font-size: 10px;
-    color: #333;
-    text-align: center;
-
-    width: 800px;
-    margin: 2em auto;
-    padding: 10px 30px;
+.news5 {
+    background-image: url("img/cgoNews.png");
 }
+
+
+
+
+#bialo{background-color: #fff;}
+.full-vh{
+    height: 100vh;
+}
+
+.all-news{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    float: right;
+    background-color: #005dff;
+}
+.all-news:hover{
+    color:white;
+    background-color: #000;
+}
+
+.army-text{
+    margin-top:50px;
+}
+
 /* FACEBOOK BOX */
 /****************/
 
@@ -384,12 +386,14 @@ a{
     top: 45%;
     background-color: #1A1E30;
     width: 53px;
+    height: 55px;
     border-bottom-right-radius: 25px;
 }
 
 .facebook-box-icon img{
     width: 45px;
     margin-left: 2px;
+    margin-top: 5px;
 }
 
 .active-fb-box{
@@ -407,51 +411,167 @@ a{
 /*****************************/
 
 .break{
-    margin-left: 20%;
-    width: 60%;
+    width: 100%;
     border-bottom: 1px solid #fff;
 }
 
 .army{
     text-align: center;
 }
-.army h1{
-    text-align: center;
-    font-size: 3rem;
+.army h1 {
+    font-size: 64px;
 }
 * {
     box-sizing: border-box;
 }
 
-
-
-
-/* Main content on index site */
-/*****************************/
-.container{
-    padding-top: 105px;
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
 }
-.content{
+
+.teams{
+    margin-top:50px;
+    background-image: url("img/teams.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 50px;
+}
+.teams-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 85px;
+}
+.teams-link-button{
+    background-color: transparent;
+    border: 2px solid #005dff;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.teams-link-button:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+/* FOOTER SECTION */
+/*////////////////*/
+
+.fh5co-bg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .fh5co-bg {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
     width: 100%;
-    height: 600px;
-}
-
-.box{
-    width: 75%;
-    height: 100%;
     float: left;
-    background-color: blue;
-}
-
-.sidebar{
-    width: 25%;
-    height: 100%;
-    float: left;
-    background-color: green;
-}
-
-.footer{
-    width: 100%;
-    height: 50px;
-    background-color:#1A1E30;
-}
+  }
+  .fh5co-bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .fh5co-bg-section {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  #fh5co-footer {
+    padding: 7em 0;
+    clear: both;
+  }
+  @media screen and (max-width: 768px) {
+    #fh5co-footer {
+      padding: 3em 0;
+    }
+  }
+  
+  #fh5co-footer {
+    position: relative;
+  }
+  #fh5co-footer .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #fh5co-footer h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #fh5co-footer .fh5co-footer-links {
+    padding: 0;
+    margin: 0;
+  }
+  #fh5co-footer .fh5co-footer-links li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  #fh5co-footer .fh5co-footer-links li a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+  }
+  #fh5co-footer .fh5co-footer-links li a:hover {
+    text-decoration: underline;
+  }
+  #fh5co-footer .fh5co-widget {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    #fh5co-footer .fh5co-widget {
+      text-align: left;
+    }
+  }
+  #fh5co-footer .fh5co-widget h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  #fh5co-footer .copyright .block {
+    display: block;
+  }
+  
+  
+  .btn-primary {
+    background: #F85A16;
+    color: #fff;
+    border: 2px solid #F85A16;
+  }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background: #f96c2f !important;
+    border-color: #f96c2f !important;
+  }
+  .btn-primary.btn-outline {
+    background: transparent;
+    color: #F85A16;
+    border: 1px solid #F85A16;
+  }
+  .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
+    background: #F85A16;
+    color: #fff;
+  }
+  
