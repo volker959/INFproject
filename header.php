@@ -15,9 +15,3 @@
     <script src="bootstrap/bootstrap.min.js"></script>
 
 </head>
-<body>
-<?php include 'functions.php' ?>
-<div class="header">
-    <div class="logo">
-        <a href="index.php"><img src="img/logo.png"></a>
-    </div>

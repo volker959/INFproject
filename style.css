@@ -18,6 +18,7 @@ src: url(fonts/Oswald-Medium.ttf);
     top: 0;
     left: 0;
     background-image: url("img/introtlo.png");
+    background-size: 100% auto;
     overflow: hidden;
 }
 
@@ -53,7 +54,7 @@ src: url(fonts/Oswald-Medium.ttf);
 }
 
 .svg-wrapper {
-    margin-left: 205px;
+    margin-left: 225px;
     margin-top: 30px;
     display: inline-block;
     border-radius: 3px;
@@ -152,7 +153,7 @@ a {
 .header{
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 93px;
     position: fixed;
     border-bottom: 1px solid #fff;
     background-color: #050505;
@@ -173,9 +174,15 @@ a {
     display: inline;
   }
 
-.logo{
+.logo img{
     float: left;
-    margin: 10px 0 0 50px;
+    margin-top: -10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.navbar-nav>li>a {
+  color:#fff !important;
 }
 
 .menu{
@@ -185,15 +192,15 @@ a {
     position: relative;
 }
 
-.menu ul{
+.menu{
     margin-left: 150px;
     padding-top: 37px;
     padding-bottom: 36px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .menu a{
-    padding: 35px 15px;
+    padding: 35px 15px !important;
 }
 
 .menu a:hover{
@@ -206,20 +213,34 @@ a {
     border-bottom: 3px solid #005dff;
 }
 
+.active:hover{
+  border-bottom: none;
+}
+
 .login-button{
-    margin-left: 20px;
+    padding: 7px 20px 7px 20px;
     background-color: #005dff;
-    border-radius: 25px;
+    margin-top:27px;
+    margin-left: 20px !important;
+    background-color: #005dff !important;
+    border-radius: 12px;
+    border: none;
+    float: left;
+}
+
+.login-button a{
+  font-size: 16px;
+  text-decoration: none;
+  
+}
+
+.login-button a:hover{
+  border-bottom:none !important;
 }
 
 .login-button:hover{
-    border-bottom: 0 !important;
     background-color:#fff !important;
     color: #000 !important;
-}
-
-.login-button{
-    padding: 12px 50px 12px 50px !important;
 }
 
 .socials{
@@ -229,12 +250,26 @@ a {
 .socials img{
     height: 24px;
     margin-right: 10px;
-    margin-top: 38px;
+    margin-top: 33px;
     -webkit-filter: grayscale(100%);
 }
 .socials img:hover{
     -webkit-filter: grayscale(0%);
 }
+
+/* Mobile menu */
+
+.navbar-toggle{
+margin-top: 28px;
+margin-right: 45px;
+}
+.navbar-inverse .navbar-nav>.active>a{
+  background-color: #050505;
+}
+.navbar-inverse{
+  z-index: 100;
+}
+
 /* Slider on index site      */
 /*****************************/
 
@@ -289,9 +324,7 @@ a {
 
 /* NEWS BOX */
 
-.container{
-    width:1500px;
-}
+
 .news-hello {
     color: #000;
     padding: 0px;
@@ -301,7 +334,7 @@ a {
 
 .news-top{
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% auto;
     padding-left: 85px;
     padding-top: 150px;
     padding-bottom: 125px;
@@ -309,7 +342,7 @@ a {
 }
 .news-bottom{
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% auto;
     padding-left: 40px;
     padding-top: 100px;
     padding-bottom: 75px;
@@ -434,7 +467,7 @@ a {
     margin-top:50px;
     background-image: url("img/teams.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% auto;
     margin-bottom: 50px;
 }
 .teams-link{
@@ -575,3 +608,240 @@ a {
     color: #fff;
   }
   
+
+
+
+
+/*        NEWS SITE          */
+/****************************/
+
+.news-container{
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+
+.news-container img{
+  width: 100%;
+  height: auto;
+}
+
+.news-open-text{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.news-padding{
+  padding:0px;
+}
+
+.news-row-margin{
+  margin-bottom: 50px;
+}
+
+.news-right-text{
+  text-align: right;
+}
+
+
+
+
+/*        TEAMS SITE          */
+/****************************/
+.teams-main{
+  margin: 50px 0px 50px 0px;
+}
+.teams-container{
+  margin-top:90px;
+}
+
+.team-csgo-img{
+  width:100%;
+  height: 400px;
+  background-image: url('img/csgobg.png');
+  background-repeat: no-repeat;
+}
+.player-img-bg{
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  float: left;
+}
+.player-img{
+  margin-top: 25px;
+  width: 50%;
+  color: #fff;
+}
+.player-img h2{
+  float: left;
+  padding-left: 15px;
+}
+
+.player-img img{
+  padding: 5px 5px 5px 5px;
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+.team-fifa-img{
+  width:100%;
+  height: 400px;
+  background-image: url('img/fifabg.png');
+  background-repeat: no-repeat;
+}
+
+.team-lol-img{
+  width:100%;
+  height: 400px;
+  background-image: url('img/lolbg.png');
+  background-repeat: no-repeat;
+}
+
+.team-hs-img{
+  width:100%;
+  height: 400px;
+  background-image: url('img/teamhs.png');
+  background-repeat: no-repeat;
+}
+
+.button-tems-show-players{
+  background-color: #005dff;
+}
+.button-tems-show-players:hover{
+  background-color: #fff;
+  color:#005dff;
+}
+
+.display-team{
+  display: none;
+}
+
+
+
+/*      PARTNERZY        */
+/****************************/
+.partners{
+  color: #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+.partners img{
+  width: 200px;
+  height: auto;
+}
+
+.partners-margin{
+  margin-top: 90px;
+}
+
+.partners-container{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color:#000;
+}
+.partner-button{
+  background-color: #005dff;
+}
+.partner-button:hover{
+  background-color: #000;
+  color:#fff;
+}
+
+
+/*      CONTACT        */
+/****************************/
+
+.contact-open h1{
+  color:#fff;
+  text-align: left !important;
+}
+
+.contact-form1 {
+  padding-top: 50px;
+  margin-top: 90px;
+}	
+
+.contact-form {
+  padding: 50px;
+  margin: 30px auto;
+}	
+.contact-form h1 {
+  font-size: 42px;
+  margin: 0 0 50px;
+  text-align: center;
+}
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+.contact-form .form-control, .contact-form .btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+.contact-form .form-control {
+border-color: #005dff;
+}
+.contact-form .form-control:focus {
+border-color: #005dff;
+box-shadow: 0 0 8px #005dff;
+}
+.contact-form .btn-primary {
+  min-width: 250px;
+  color: #fff;
+  background: #005dff;
+  margin-top: 20px;
+  border: none;
+}
+.contact-form .btn-primary:hover {
+  color: #005dff; 
+  background-color: #fff !important;
+}
+.contact-form .btn-primary i {
+  margin-right: 5px;
+}
+.contact-form label {
+  opacity: 0.9;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.bs-example {
+margin: 20px;
+}
+label{
+  font-size: 17px;
+}
+
+
+
+/*      RESPONSYWNOSC        */
+/****************************/
+
+  @media (max-width:1020px){.menu ul{margin-left: 15px;}}
+  @media (max-width:1195px){
+    .fly-in-text li {font-size: 50px;margin-right: 10px;}
+    .svg-wrapper {margin-left: 160px;}
+  }
+  @media (max-width:810px){
+    .fly-in-text li {font-size: 18px;margin-right: 3px;}
+    .svg-wrapper {margin-left: 40px;}
+  }
+  @media (max-width:767px){.socials {display: none}}
+  @media (max-width:767px){.menu{
+    height: auto;
+    width: 50vh;
+    background-color: #000;
+    text-align: center;
+  }}
+  @media (max-width:767px){.active{
+    background-color: #000;
+    border:none;
+  }}
+  @media (max-width:767px){.login-button{
+    display:none;
+  }}
+  @media (max-width:992px){.all-news{
+    float:left;
+    margin-top: auto;
+  }}
