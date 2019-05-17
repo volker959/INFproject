@@ -1,8 +1,55 @@
+<?php require_once 'submit.php'; ?>
 <!DOCTYPE html>
 <html>
     <?php 
         include 'header.php'; 
     ?>
+<script type="text/javascript">
+        function validate() {
+            var valid = true;
+
+            $(".info").html("");
+            var userName = document.forms["mailForm"]["userName"].value;
+            var userEmail = document.forms["mailForm"]["userEmail"].value;
+            var subject = document.forms["mailForm"]["subject"].value;
+            var userMessage = document.forms["mailForm"]["userMessage"].value;
+            
+            if (userName == "") {
+                $("#userName-info").html("(required)");
+                $("#userName").css('background-color', '#FFFFDF');
+                valid = false;
+            }
+            if (userEmail == "") {
+                $("#userEmail-info").html("(required)");
+                $("#userEmail").css('background-color', '#FFFFDF');
+                valid = false;
+            }
+            if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/))
+            {
+                $("#userEmail-info").html("(invalid)");
+                $("#userEmail").css('background-color', '#FFFFDF');
+                valid = false;
+            }
+
+            if (subject == "") {
+                $("#subject-info").html("(required)");
+                $("#subject").css('background-color', '#FFFFDF');
+                valid = false;
+            }
+            if (userMessage == "") {
+                $("#userMessage-info").html("(required)");
+                $("#userMessage").css('background-color', '#FFFFDF');
+                valid = false;
+            }
+            return valid;
+        }
+        
+        function addMoreAttachment() {
+            $(".attachment-row:last").clone().insertAfter(".attachment-row:last");
+            $(".attachment-row:last").find("input").val("");
+        }
+</script>
+
 <body onload="startTime()">
 <?php include 'functions.php' ?>
 
@@ -43,42 +90,47 @@
         </div>
     </div>
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2 m-auto">
-			<div class="contact-form">
-                <h1>Zostań w kontakcie</h1>
-                
-				<form id="dane" name="dane" method="post" onsubmit="return validateForm()">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label for="inputName">Imie</label>
-								<input id="imie" name="imie" type="text" class="form-control">
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label for="inputEmail">Email</label>
-								<input id="mails" name="mails" type="email" class="form-control" >
-							</div>
-						</div>
-					</div>            
-					<div class="form-group">
-						<label for="inputSubject">Temat</label>
-						<input id="temat" name="temat" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="inputMessage">Wiadomość</label>
-						<textarea id="tesc" name="tresc"  class="form-control" rows="5"></textarea>
-					</div>
-					<div class="text-center">
-						<button id="submit"  type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Wyślij</button>
-					</div>            
-                </form>
-                <div id="form-status" class="col-sm-12">
-                    <h2 class="status-text"></h2>
+        <?php if(!empty($statusMsg)){ ?>
+            <p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
+        <?php } ?>
+
+        <!-- Display contact form -->
+        <form method="post" action="" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" name="name" class="form-control" value="<?php echo !empty($postData['name'])?$postData['name']:''; ?>" placeholder="Name" required="">
+            </div>
+            <div class="form-group">
+            <div>
+                <input type="radio" id="huey" name="drone" value="huey">
+                <label for="huey">Kobieta</label>
                 </div>
-			</div>
-		</div>
+
+                <div>
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <label for="dewey">Mężczyzna</label>
+            </div>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" value="<?php echo !empty($postData['email'])?$postData['email']:''; ?>" placeholder="Email address" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" name="subject" class="form-control" value="<?php echo !empty($postData['subject'])?$postData['subject']:''; ?>" placeholder="Subject" required="">
+            </div>
+            <div class="form-group">
+                <textarea name="message" class="form-control" placeholder="Write your message here" required=""><?php echo !empty($postData['message'])?$postData['message']:''; ?></textarea>
+            </div>
+            <div class="form-group">
+                <input type="file" name="attachment" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="horns" name="horns">
+                <label for="horns">Wyrażam zgodę na przesyłanie danych zawarych w formularzu.</label>
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" class="btn" value="SUBMIT">
+            </div>
+        </form>
+
 	</div>
 </div>
 
