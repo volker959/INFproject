@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
                 $fromName = 'INFRACTION';
                 
                 // Subject
-                $emailSubject = 'Contact Request Submitted by '.$name;
+                $emailSubject = 'Wiadomość z formularza kontaktowego '.$name;
                 
                 // Message 
                 $htmlContent = '<h2>Contact Request Submitted</h2>

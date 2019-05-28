@@ -23,7 +23,8 @@
         <li><a class="menus" href="teams.php">TEAMS</a></li>
         <li><a class="menus" href="partners.php">PARTNERZY</a></li>
         <li><a class="menus" href="contact.php">KONTAKT</a></li>
-        <button class="login-button"><a href="login.php">ZALOGUJ</a></button>
+        <button class="login-button"><a href="login/login.php">ZALOGUJ</a></button>
+        <button class="login-button"><a href="class/index.php">ZALOGUJ</a></button>
       </ul>
       
       <ul class="navbar-right">
