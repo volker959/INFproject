@@ -24,7 +24,7 @@
         <li><a class="menus" href="partners.php">PARTNERZY</a></li>
         <li><a class="menus" href="contact.php">KONTAKT</a></li>
         <button class="login-button"><a href="login/login.php">ZALOGUJ</a></button>
-        <button class="login-button"><a href="class/index.php">ZALOGUJ</a></button>
+        <button class="login-button"><a href="class/index.php">Pliki</a></button>
       </ul>
       
       <ul class="navbar-right">
